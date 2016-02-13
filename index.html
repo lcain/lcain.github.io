@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>My Portfiolio</title>
+  <!-- Magnific Popup core CSS file -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" type="text/css" href="css/portfolio.css">
 
-  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/phaser.min.js"></script>
   <script src="js/game.js"></script>
-  <script src="js/portfolio.js"></script>
-<!--   <script src="js/play.js"></script> -->
+
+
+
 </head>
 <body>
 
@@ -21,11 +27,46 @@
 
 <div id="game">
   <div id="about_me" class="div_style">
-  <div class="inside"></div><p>About Me</p></div>
-  <div id="projects" class="div_style"><p>Projects</p></div>
-  <div id="resume" class="div_style"><p>Resume</p></div>
-  <div id="contact" class="div_style"><p>Contact</p></div>
+  <div class="inside"></div><p href="#about-me" class="popup-with-zoom-anim">About Me</p></div>
+  <div id="projects" class="div_style"><p href="#projects2" class="popup-with-zoom-anim">Projects</p></div>
+  <div id="resume" class="div_style"><a href="LorettaCainResume.pdf" target="_blank">Resume</a></div>
+  <div id="contact" class="div_style"><p href="#contact-me" class="popup-with-zoom-anim">Contact</p></div>
 </div>
+
+
+<!-- <a class="image-popup-vertical-fit" href="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_b.jpg" title="Caption. Can be aligned to any side and contain any HTML.">
+  <img src="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_s.jpg" width="75" height="75">
+</a>
+
+<a class="image-popup-fit-width" href="http://farm9.staticflickr.com/8379/8588290361_ecf8c27021_b.jpg" title="This image fits only horizontally.">
+  <img src="http://farm9.staticflickr.com/8379/8588290361_ecf8c27021_s.jpg" width="75" height="75">
+</a>
+<a class="image-popup-no-margins" href="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg">
+  <img src="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg" width="107" height="75">
+</a> -->
+
+
+<div id="about-me" class="zoom-anim-dialog mfp-hide">
+  <h1>About Me</h1>
+  <p>Hi! I'm Loretta. I'm a junior front end web developer and I love rock climbing, video games, and my comic book t-shirts.</p>
+  <p>I completed a Diploma of Civil Engineering Design and then became extremely interested in web development. After self teaching with online courses for a year I decided to enroll in General Assembly's Web Development Immersive. And I loved every minute of it.</p>
+  <p>I'm passionated about learning always seeking to discover new things.</p>
+  <p>I'm a customer services specialst with 10 years of experience in management, conflict resolution, and communication.</p>
+
+</div>
+
+<div id="contact-me" class="zoom-anim-dialog mfp-hide">
+  <h1>Contact Me</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ipsam laborum quaerat aut deleniti, tempore doloribus magnam fuga placeat atque sed fugiat facere veritatis temporibus saepe unde, eligendi, ea, ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eligendi totam mollitia quae, porro velit, recusandae magnam consectetur autem a nulla pariatur odio maxime numquam soluta, ipsam in earum ex.</p>
+</div>
+
+<div id="projects2" class="zoom-anim-dialog mfp-hide">
+  <h1>Projects</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ipsam laborum quaerat aut deleniti, tempore doloribus magnam fuga placeat atque sed fugiat facere veritatis temporibus saepe unde, eligendi, ea, ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eligendi totam mollitia quae, porro velit, recusandae magnam consectetur autem a nulla pariatur odio maxime numquam soluta, ipsam in earum ex.</p>
+</div>
+
+
+
 
 </div>
 

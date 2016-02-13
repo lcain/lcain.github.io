@@ -1,3 +1,5 @@
+var app = app || {};
+
 var game = new Phaser.Game(400, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update });
 
 function preload() {
@@ -6,6 +8,9 @@ function preload() {
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+    game.load.spritesheet('linkright', 'assets/linkright.png', 50, 52);
+    game.load.spritesheet('linkleft', 'assets/linkleft.png', 50, 52);
+    game.load.spritesheet('rupee', 'assets/rupees.png', 36, 35);
 
 
 
@@ -79,6 +84,12 @@ function create() {
     //  Here we'll create 12 of them evenly spaced apart
     for (var i = 0; i < 6; i++)
     {
+
+        var randomNum = function(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+       
+
         //  Create a star inside of the 'stars' group
         var star = stars.create(i * 70, 0, 'star');
 
@@ -163,6 +174,11 @@ function update() {
     {
         player.body.velocity.y = -350;
     }
+
+    hippo();
+    lizard();
+    cows();
+    contact();
 
 }
 
