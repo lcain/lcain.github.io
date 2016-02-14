@@ -510,7 +510,7 @@ Contact and About me CSS*/
   content:'';
   width:200px;
   height:100px;
-  background:#177b8f;
+  background:rgb(15, 178, 213);
   position:absolute;
   border-radius:50%;
   top:-50px;
