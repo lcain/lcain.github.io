@@ -44,7 +44,7 @@ h1 {
   margin-left: 33%;
 }
 
-#about_me p:hover, #contact p:hover, #projects p:hover, #resume a:hover {
+#about_me p:hover, #contact p:hover, #projects p:hover, #resume a:hover, #greeting h1:hover {
   color: black;
   cursor: hand;
   cursor: pointer;
@@ -164,7 +164,7 @@ canvas {
 Contact and About me CSS*/
 
 /* Styles for dialog window */
-#about-me {
+#about-me, #hi {
   background-color: rgb(226, 249, 255);
   padding: 20px 30px;
   border-radius: 20px;
@@ -199,6 +199,10 @@ Contact and About me CSS*/
   color: rgb(226, 249, 255);
   background-color: rgb(15, 178, 213);
 }
+
+/*.img-circle{
+  border-radius: 50%;
+}*/
 
 .social {
   height: 32px;
