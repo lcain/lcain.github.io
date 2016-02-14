@@ -1,7 +1,10 @@
 body {
+  /*background: url("/assets/pattern1.png");*/
   background-color: rgb(15, 178, 213);
+  background-size: cover;
   z-index: 10;
   font-family: Rosario, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+  overflow: hidden;
   /*background-image: url("../assets/background1.jpg");*/
 }
 /*
@@ -9,9 +12,18 @@ body {
   min-width: 600px;
 }*/
 
+/*#container {
+  position: absolute;
+  margin: auto;
+}*/
+
 h1 {
-  color: black;
+  color: rgb(226, 249, 255);
   text-align: center;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(226, 249, 255, 0.3);
   font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -27,13 +39,13 @@ h1 {
 #about_me p {
   margin-top: 5px;
   font-size: 24px;
-  color: black;
+  color: rgb(226, 249, 255);
   width: 130px;
   margin-left: 33%;
 }
 
-#about_me p:hover {
-  color: rgb(226, 249, 255);
+#about_me p:hover, #contact p:hover, #projects p:hover, #resume a:hover {
+  color: black;
   cursor: hand;
   cursor: pointer;
 }
@@ -42,7 +54,7 @@ h1 {
   position: absolute;
   margin-top: 200px;
   margin-left: 210px;
-  width: 190px;
+  width: 192px;
   text-align: left;
   font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
  /* border: 1px solid red;*/
@@ -52,14 +64,8 @@ h1 {
   margin-top: 5px;
   margin-left: 10px;
   font-size: 24px;
-  color: black;
-  width: 120px;
-}
-
-#projects p:hover {
   color: rgb(226, 249, 255);
-  cursor: hand;
-  cursor: pointer;
+  width: 120px;
 }
 
 #resume {
@@ -77,17 +83,11 @@ h1 {
   margin-top: 5px;
   margin-right: 10px;
   font-size: 24px;
-  color: black;
+  color: rgb(226, 249, 255);
   width: 120px;
   margin-left: 35%;
   text-decoration: none;
   line-height: 165%;
-}
-
-#resume a:hover {
-  color: rgb(226, 249, 255);
-  cursor: hand;
-  cursor: pointer;
 }
 
 #contact {
@@ -104,15 +104,10 @@ h1 {
   margin-top: 5px;
   margin-left: 10px;
   font-size: 24px;
-  color: black;
+  color: rgb(226, 249, 255);
   width: 100px;
 }
 
-#contact p:hover {
-  color: rgb(226, 249, 255);
-  cursor: hand;
-  cursor: pointer;
-}
 
 
 .div_style {
@@ -127,6 +122,8 @@ canvas {
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
+  background-color: rgba(226, 249, 255, 0.3);
+ 
  
 }
 
@@ -139,7 +136,7 @@ canvas {
 
 .bubble {
   position: absolute;
-  border: 1px solid lime;
+  border: 10px solid rgb(15, 178, 213);
   width: 2em;
   height: 2em;
   border-radius: 100%;
@@ -170,7 +167,7 @@ Contact and About me CSS*/
 #about-me {
   background-color: rgb(226, 249, 255);
   padding: 20px 30px;
-  border-radius: 5%;
+  border-radius: 20px;
   text-align: center;
   max-width: 400px;
   margin: 40px auto;
@@ -179,7 +176,7 @@ Contact and About me CSS*/
 
 #contact-me {
   background-color: rgb(226, 249, 255);
-  border-radius: 5%;
+  border-radius: 20px;
   padding: 20px 30px;
   text-align: left;
   max-width: 400px;
@@ -190,7 +187,7 @@ Contact and About me CSS*/
 
 #projects2 {
   background-color: rgb(226, 249, 255);
-  border-radius: 5%;
+  border-radius: 20px;
   padding: 20px 30px;
   text-align: left;
   max-width: 400px;
@@ -294,3 +291,302 @@ Contact and About me CSS*/
   opacity: 0;
 }
 
+
+
+/*CLOUDS*/
+
+#clouds{
+  padding: 100px 0;
+  margin-left: 35%;
+ /* background: #c9dbe9;
+  background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+  background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+  background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);*/
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+  width: 200px; height: 60px;
+  background: #fff;
+  
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  
+  position: relative; 
+}
+
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute; 
+  background: #fff;
+  width: 100px; height: 80px;
+  position: absolute; top: -15px; left: 10px;
+  
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px; height: 120px;
+  top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+  z-index: -50;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  left: 200px;
+  
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6; /*opacity proportional to the size*/
+  
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite;
+  z-index: -50;
+}
+
+.x3 {
+  left: -250px; top: -200px;
+  
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+  z-index: -50;
+}
+
+.x4 {
+  left: 470px; top: -250px;
+  
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 18s linear infinite;
+  -moz-animation: moveclouds 18s linear infinite;
+  -o-animation: moveclouds 18s linear infinite;
+  z-index: -50;
+}
+
+.x5 {
+  left: -150px; top: -150px;
+  
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+  z-index: -50;
+}
+
+@-webkit-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+
+
+
+
+/*centre positioning*/
+#outerDiv {
+  display: table;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+/*
+#middleDiv {
+  display: table-cell; 
+  vertical-align: middle;
+}*/
+
+#innerDiv {
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 80%;
+  height: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------
+    Waves
+-----------------*/
+.wave1{
+  background:#177b8f;
+  height:300px;
+  position:absolute;
+  width:250%;
+  bottom:0;
+  left:-20%;
+  z-index:-100;
+  
+  -ms-animation: background 3s infinite alternate;
+  -moz-animation: background 3s infinite alternate;
+  -webkit-animation: background 3s infinite alternate;
+  -o-animation: background 3s infinite alternate;
+  animation: background 3s infinite alternate;
+}
+.wave1:after{
+  content:'';
+  z-index:-100;
+  width:300px;
+  height:100px;
+  background:#BFEFFF;
+  position:absolute;
+  border-radius:50%;
+  top:-50px;
+  box-shadow:
+    300px 0 0 0 #BFEFFF,
+    600px 0 0 0 #BFEFFF,
+    900px 0 0 0 #BFEFFF,
+    1200px 0 0 0 #BFEFFF,
+    1500px 0 0 0 #BFEFFF,
+    1800px 0 0 0 #BFEFFF
+    ;
+}
+.wave2{
+  z-index:-100;
+  background:#1D9AB3;
+  height:200px;
+  position:absolute;
+  width:250%;
+  bottom:0;
+  left:-20%;
+  z-index: -100;
+  
+  -ms-animation: middle 2s infinite alternate;
+  -moz-animation: middle 2s infinite alternate;
+  -webkit-animation: middle 2s infinite alternate;
+  -o-animation: middle 2s infinite alternate;
+  animation: middle 2s infinite alternate;
+}
+.wave2:after{
+  content:'';
+  width:200px;
+  height:100px;
+  background:#177b8f;
+  position:absolute;
+  border-radius:50%;
+  top:-50px;
+  left:-50px;
+  box-shadow:
+    200px 0 0 0 rgb(15, 178, 213), 400px 0 0 0 rgb(15, 178, 213), 600px 0 0 0 rgb(15, 178, 213), 800px 0 0 0 rgb(15, 178, 213), 1000px 0 0 0 rgb(15, 178, 213), 1200px 0 0 0 rgb(15, 178, 213), 1400px 0 0 0 rgb(15, 178, 213), 1600px 0 0 0 rgb(15, 178, 213), 1800px 0 0 0 rgb(15, 178, 213);
+  z-index:-100;
+}
+
+.wave3{
+  background:#4aaec2;
+  height:100px;
+  width:250%;
+  bottom:0;
+  left:-20%;
+  position:absolute;
+  z-index:-100;
+  
+  -ms-animation: first 1.5s infinite alternate;
+  -moz-animation: first 1.5s infinite alternate;
+  -webkit-animation: first 1.5s infinite alternate;
+  -o-animation: first 1.5s infinite alternate;
+  animation: first 1.5s infinite alternate;
+}
+.wave3:after{
+  content:'';
+  width:150px;
+  height:100px;
+  background:#1D9AB3;
+  position:absolute;
+  border-radius:50%;
+  top:-50px;
+  left:-70px;
+  box-shadow:
+    150px 0 0 0 #1D9AB3,
+    300px 0 0 0 #1D9AB3,
+    450px 0 0 0 #1D9AB3,
+    600px 0 0 0 #1D9AB3,
+    750px 0 0 0 #1D9AB3,
+    900px 0 0 0 #1D9AB3,
+    1050px 0 0 0 #1D9AB3,
+    1200px 0 0 0 #1D9AB3,
+    1350px 0 0 0 #1D9AB3,
+    1500px 0 0 0 #1D9AB3,
+    1650px 0 0 0 #1D9AB3,
+    1800px 0 0 0 #1D9AB3,
+    1950px 0 0 0 #1D9AB3
+    ;
+  z-index:-100;
+}
+
+
+
+
+
+
+
+
+/*-----------------
+    Paralax
+-----------------*/
+
+@-ms-keyframes background      { 0% { -ms-transform: translatex(-10px); } 100% { -ms-transform: translatex(10px); } }
+@-moz-keyframes background     { 0% { -moz-transform: translatex(-10px); } 100% { -moz-transform: translatex(10px); } }
+@-webkit-keyframes background  { 0% { -webkit-transform: translatex(-10px); } 100% { -webkit-transform: translatex(10px); } }
+@-o-keyframes background       { 0% { -o-transform: translatex(-10px); } 100% { -o-transform: translatex(10px); } }
+@keyframes background        { 0% { transform: translatex(-10px); } 100% { transform: translatex(10px); } }
+
+@-ms-keyframes middle     { 0% { -ms-transform: translatex(15px); } 100% { -ms-transform: translatex(-15px); } }
+@-moz-keyframes middle    { 0% { -moz-transform: translatex(15px); } 100% { -moz-transform: translatex(-15px); } }
+@-webkit-keyframes middle { 0% { -webkit-transform: translatex(15px); } 100% { -webkit-transform: translatex(-15px); } }
+@-o-keyframes middle      { 0% { -o-transform: translatex(15px); } 100% { -o-transform: translatex(-15px); } }
+@keyframes middle        { 0% { transform: translatex(15px); } 100% { transform: translatex(-15px); } }
+
+@-ms-keyframes first     { 0% { -ms-transform: translatex(-10px); } 100% { -ms-transform: translatex(10px); } }
+@-moz-keyframes first    { 0% { -moz-transform: translatex(-10px); } 100% { -moz-transform: translatex10px); } }
+@-webkit-keyframes first { 0% { -webkit-transform: translatex(-10px); } 100% { -webkit-transform: translatex(10px; } }
+@-o-keyframes first      { 0% { -o-transform: translatex(-10px); } 100% { -o-transform: translatex(10px); } }
+@keyframes first         { 0% { transform: translatex(-10px; } 100% { transform: translatex(10px); } }

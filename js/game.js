@@ -1,11 +1,11 @@
 var app = app || {};
 
-var game = new Phaser.Game(400, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(400, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update }, true);
 
 function preload() {
 
-    game.load.image('sky', 'assets/sky.png');
-    game.load.image('ground', 'assets/platform.png');
+    game.load.image('sky', 'assets/sky3.png');
+    game.load.image('ground', 'assets/platform2.png');
     game.load.image('star', 'assets/star.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
     game.load.spritesheet('linkright', 'assets/linkright.png', 50, 52);
@@ -30,7 +30,7 @@ function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     //  A simple background for our game
-    game.add.sprite(0, 0, 'sky');
+    // game.add.sprite(0, 0, 'sky');
 
     //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = game.add.group();
@@ -39,7 +39,7 @@ function create() {
     platforms.enableBody = true;
 
     // Here we create the ground.
-    var ground = platforms.create(0, game.world.height - 50, 'ground');
+    var ground = platforms.create(0, game.world.height - 40, 'ground');
 
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
     ground.scale.setTo(2, 2);
