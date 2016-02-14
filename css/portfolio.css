@@ -213,6 +213,26 @@ Contact and About me CSS*/
   background-color: rgb(15, 178, 213);
 }
 
+.projectimg {
+  width: 175px;
+  padding: 11px;
+}
+
+.projectimg:hover{
+  background-color: rgb(15, 178, 213);
+}
+
+.projectAlign {
+  display: inline-block;
+}
+
+.description {
+  display: block;
+  width: 198px;
+  text-align: center;
+
+}
+
 /**
  * Fade-zoom animation for first dialog
  */
