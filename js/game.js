@@ -127,7 +127,7 @@ function create() {
 
 
     //  The score
-    scoreText = game.add.text(16, 570, 'score: 0', { fontSize: '24px', fill: '#000' });
+    // scoreText = game.add.text(16, 570, 'score: 0', { fontSize: '24px', fill: '#000' });
 
     //  Our controls.
     cursors = game.input.keyboard.createCursorKeys();
@@ -188,8 +188,8 @@ function collectStar (player, star) {
     star.kill();
 
     //  Add and update the score
-    score += 10;
-    scoreText.text = 'Score: ' + score;
+    // score += 10;
+    // scoreText.text = 'Score: ' + score;
 
 }
 

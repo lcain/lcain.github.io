@@ -1,7 +1,7 @@
 body {
-  background-color: black;
+  background-color: rgb(15, 178, 213);
   z-index: 10;
-  font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+  font-family: Rosario, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
   /*background-image: url("../assets/background1.jpg");*/
 }
 /*
@@ -10,8 +10,9 @@ body {
 }*/
 
 h1 {
-  color: red;
+  color: black;
   text-align: center;
+  font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
 }
 
 #about_me {
@@ -19,19 +20,20 @@ h1 {
   width: 200px;
   margin-top: 70px;
   text-align: right;
+  font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
   /*border: 1px solid red;*/
 }
 
 #about_me p {
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 24px;
-  color: red;
+  color: black;
   width: 130px;
   margin-left: 33%;
 }
 
 #about_me p:hover {
-  color: blue;
+  color: rgb(226, 249, 255);
   cursor: hand;
   cursor: pointer;
 }
@@ -42,19 +44,20 @@ h1 {
   margin-left: 210px;
   width: 190px;
   text-align: left;
+  font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
  /* border: 1px solid red;*/
 }
 
 #projects p {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 10px;
   font-size: 24px;
-  color: red;
+  color: black;
   width: 120px;
 }
 
 #projects p:hover {
-  color: blue;
+  color: rgb(226, 249, 255);
   cursor: hand;
   cursor: pointer;
 }
@@ -64,20 +67,25 @@ h1 {
   margin-top: 330px;
   text-align: right;
   width: 200px;
+  font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+
 /*  border: 1px solid red;*/
 }
 
-#resume p {
-  margin-top: 10px;
+#resume a {
+  margin: none;
+  margin-top: 5px;
   margin-right: 10px;
   font-size: 24px;
-  color: red;
+  color: black;
   width: 120px;
   margin-left: 35%;
+  text-decoration: none;
+  line-height: 165%;
 }
 
-#resume p:hover {
-  color: blue;
+#resume a:hover {
+  color: rgb(226, 249, 255);
   cursor: hand;
   cursor: pointer;
 }
@@ -89,18 +97,19 @@ h1 {
   text-align: left;
   /*border: 1px solid red;*/
   width: 190px;
+  font-family: Quicksand, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
 }
 
 #contact p {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 10px;
   font-size: 24px;
-  color: red;
+  color: black;
   width: 100px;
 }
 
 #contact p:hover {
-  color: blue;
+  color: rgb(226, 249, 255);
   cursor: hand;
   cursor: pointer;
 }
@@ -110,7 +119,7 @@ h1 {
   position: absolute;
  /* border: 2px solid red;*/
   height: 40px;
-  background-color: black;
+  background-color: rgb(15, 178, 213);
 }
 
 canvas {
@@ -159,16 +168,29 @@ Contact and About me CSS*/
 
 /* Styles for dialog window */
 #about-me {
-  background: white;
+  background-color: rgb(226, 249, 255);
   padding: 20px 30px;
-  text-align: left;
+  border-radius: 5%;
+  text-align: center;
   max-width: 400px;
   margin: 40px auto;
   position: relative;
 }
 
 #contact-me {
-  background: white;
+  background-color: rgb(226, 249, 255);
+  border-radius: 5%;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 400px;
+  margin: 40px auto;
+  position: relative;
+  text-align: center;
+}
+
+#projects2 {
+  background-color: rgb(226, 249, 255);
+  border-radius: 5%;
   padding: 20px 30px;
   text-align: left;
   max-width: 400px;
@@ -176,13 +198,19 @@ Contact and About me CSS*/
   position: relative;
 }
 
-#projects2 {
-  background: white;
-  padding: 20px 30px;
-  text-align: left;
-  max-width: 400px;
-  margin: 40px auto;
-  position: relative;
+.titles {
+  color: black;
+  background-color: rgb(15, 178, 213);
+}
+
+.social {
+  height: 32px;
+  width: 32px;
+  padding: 20px; 
+}
+
+.socialhover:hover {
+  background-color: rgb(15, 178, 213);
 }
 
 /**
