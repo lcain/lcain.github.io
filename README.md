@@ -1,6 +1,6 @@
 #Thanks for visiting!
 
-Check out where I got the sources below: 
+Check out the sources for my site below: 
 
 http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background
 
@@ -15,3 +15,5 @@ https://github.com/photonstorm/phaser-examples/blob/master/examples/animation/mu
 http://dingohackz.deviantart.com/art/Shark-Fin-Body-549297033
 
 http://spritedatabase.net/file/16070
+
+http://fortawesome.github.io/Font-Awesome/
