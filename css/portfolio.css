@@ -51,7 +51,7 @@ h1 {
   font-size: 24px;
   color: rgb(226, 249, 255);
   width: 130px;
-  margin-left: 33%;
+  margin-left: 30%;
 }
 
 #about_me p:hover, #contact p:hover, #projects p:hover, #resume a:hover, #greeting h1:hover, #grabCode a:hover{
