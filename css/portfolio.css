@@ -7,6 +7,16 @@ body {
   overflow: hidden;
   /*background-image: url("../assets/background1.jpg");*/
 }
+
+#grabCode a{
+  border: 1px solid white;
+  bottom: 0px;
+  position: fixed;
+  left: 0px;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+}
 /*
 #container {
   min-width: 600px;
@@ -44,7 +54,7 @@ h1 {
   margin-left: 33%;
 }
 
-#about_me p:hover, #contact p:hover, #projects p:hover, #resume a:hover, #greeting h1:hover {
+#about_me p:hover, #contact p:hover, #projects p:hover, #resume a:hover, #greeting h1:hover, #grabCode {
   color: rgba(29, 154, 179, 1);
   cursor: hand;
   cursor: pointer;
@@ -234,6 +244,7 @@ Contact and About me CSS*/
   display: block;
   width: 198px;
   text-align: center;
+  color: black;
 
 }
 

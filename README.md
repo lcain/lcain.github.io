@@ -1,6 +1,6 @@
 #Thanks for visiting!
 
-Check out where I got the code from here: 
+Check out where I got the sources below: 
 
 http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background
 
