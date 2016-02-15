@@ -45,9 +45,10 @@ h1 {
 }
 
 #about_me p:hover, #contact p:hover, #projects p:hover, #resume a:hover, #greeting h1:hover {
-  color: black;
+  color: rgba(29, 154, 179, 1);
   cursor: hand;
   cursor: pointer;
+  font-weight: 900;
 }
 
 #projects {
@@ -222,6 +223,7 @@ Contact and About me CSS*/
 
 .projectimg:hover{
   background-color: rgb(15, 178, 213);
+  border-radius: 5px;
 }
 
 .projectAlign {
