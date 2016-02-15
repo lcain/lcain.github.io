@@ -7,7 +7,7 @@ function preload() {
     game.load.atlasXML('seacreatures', 'assets/seacreatures.png', 'assets/seacreatures.xml');
     game.load.image('sky', 'assets/sky3.png');
     game.load.image('ground', 'assets/platform3.png');
-    game.load.image('ground2', 'assets/platform5.png');
+    game.load.image('ground2', 'assets/platform4.png');
     game.load.image('star', 'assets/star.png');
     game.load.spritesheet('dude', 'assets/dudecopy23.png', 32, 48);
     game.load.spritesheet('linkright', 'assets/linkright.png', 50, 52);
