@@ -8,7 +8,7 @@ function preload() {
     game.load.image('sky', 'assets/sky3.png');
     game.load.image('ground', 'assets/platform2.png');
     game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+    game.load.spritesheet('dude', 'assets/dudecopy.png', 32, 48);
     game.load.spritesheet('linkright', 'assets/linkright.png', 50, 52);
     game.load.spritesheet('linkleft', 'assets/linkleft.png', 50, 52);
     game.load.spritesheet('rupee', 'assets/rupees.png', 36, 35);
