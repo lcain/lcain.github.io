@@ -37,7 +37,7 @@ h1 {
 }
 
 #about_me p {
-  margin-top: 5px;
+  margin-top: 1px;
   font-size: 24px;
   color: rgb(226, 249, 255);
   width: 130px;
@@ -61,7 +61,7 @@ h1 {
 }
 
 #projects p {
-  margin-top: 5px;
+  margin-top: 1px;
   margin-left: 10px;
   font-size: 24px;
   color: rgb(226, 249, 255);
@@ -80,14 +80,14 @@ h1 {
 
 #resume a {
   margin: none;
-  margin-top: 5px;
+  margin-top: 1px;
   margin-right: 10px;
   font-size: 24px;
   color: rgb(226, 249, 255);
   width: 120px;
   margin-left: 35%;
   text-decoration: none;
-  line-height: 165%;
+  line-height: 135%;
 }
 
 #contact {
@@ -101,7 +101,7 @@ h1 {
 }
 
 #contact p {
-  margin-top: 5px;
+  margin-top: 1px;
   margin-left: 10px;
   font-size: 24px;
   color: rgb(226, 249, 255);
@@ -114,7 +114,7 @@ h1 {
   position: absolute;
  /* border: 2px solid red;*/
   height: 40px;
-  background-color: rgb(15, 178, 213);
+  background-color: rgba(15, 178, 213, 0);
 }
 
 canvas {
@@ -212,6 +212,7 @@ Contact and About me CSS*/
 
 .socialhover:hover {
   background-color: rgb(15, 178, 213);
+  border-radius: 20px;
 }
 
 .projectimg {
