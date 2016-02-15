@@ -300,7 +300,7 @@ Contact and About me CSS*/
 
 /*CLOUDS*/
 
-#clouds{
+#clouds {
   padding: 100px 0;
   margin-left: 35%;
  /* background: #c9dbe9;
@@ -343,6 +343,18 @@ Contact and About me CSS*/
 }
 
 /*Time to animate*/
+.shark2{
+  position: absolute;
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+  z-index: -99;
+  margin-top: 100px;
+  margin-left: 300px;
+  bottom: -100px;
+
+}
+
 .x1 {
   -webkit-animation: moveclouds 15s linear infinite;
   -moz-animation: moveclouds 15s linear infinite;
@@ -462,39 +474,7 @@ Contact and About me CSS*/
 /*-----------------
     Waves
 -----------------*/
-.wave1{
-  background:#177b8f;
-  height:300px;
-  position:absolute;
-  width:250%;
-  bottom:0;
-  left:-20%;
-  z-index:-100;
-  
-  -ms-animation: background 3s infinite alternate;
-  -moz-animation: background 3s infinite alternate;
-  -webkit-animation: background 3s infinite alternate;
-  -o-animation: background 3s infinite alternate;
-  animation: background 3s infinite alternate;
-}
-.wave1:after{
-  content:'';
-  z-index:-100;
-  width:300px;
-  height:100px;
-  background:#BFEFFF;
-  position:absolute;
-  border-radius:50%;
-  top:-50px;
-  box-shadow:
-    300px 0 0 0 #BFEFFF,
-    600px 0 0 0 #BFEFFF,
-    900px 0 0 0 #BFEFFF,
-    1200px 0 0 0 #BFEFFF,
-    1500px 0 0 0 #BFEFFF,
-    1800px 0 0 0 #BFEFFF
-    ;
-}
+
 .wave2{
   z-index:-100;
   background:#1D9AB3;
@@ -503,7 +483,7 @@ Contact and About me CSS*/
   width:250%;
   bottom:0;
   left:-20%;
-  z-index: -100;
+  z-index: -115;
   
   -ms-animation: middle 2s infinite alternate;
   -moz-animation: middle 2s infinite alternate;
@@ -522,7 +502,7 @@ Contact and About me CSS*/
   left:-50px;
   box-shadow:
     200px 0 0 0 rgb(15, 178, 213), 400px 0 0 0 rgb(15, 178, 213), 600px 0 0 0 rgb(15, 178, 213), 800px 0 0 0 rgb(15, 178, 213), 1000px 0 0 0 rgb(15, 178, 213), 1200px 0 0 0 rgb(15, 178, 213), 1400px 0 0 0 rgb(15, 178, 213), 1600px 0 0 0 rgb(15, 178, 213), 1800px 0 0 0 rgb(15, 178, 213);
-  z-index:-100;
+  z-index:-115;
 }
 
 .wave3{
@@ -544,25 +524,25 @@ Contact and About me CSS*/
   content:'';
   width:150px;
   height:100px;
-  background:#1D9AB3;
+  background:rgba(29, 154, 179, 0);
   position:absolute;
   border-radius:50%;
   top:-50px;
   left:-70px;
   box-shadow:
-    150px 0 0 0 #1D9AB3,
-    300px 0 0 0 #1D9AB3,
-    450px 0 0 0 #1D9AB3,
-    600px 0 0 0 #1D9AB3,
-    750px 0 0 0 #1D9AB3,
-    900px 0 0 0 #1D9AB3,
-    1050px 0 0 0 #1D9AB3,
-    1200px 0 0 0 #1D9AB3,
-    1350px 0 0 0 #1D9AB3,
-    1500px 0 0 0 #1D9AB3,
-    1650px 0 0 0 #1D9AB3,
-    1800px 0 0 0 #1D9AB3,
-    1950px 0 0 0 #1D9AB3
+    150px 0 0 0 rgba(29, 154, 179, 1),
+    300px 0 0 0 rgba(29, 154, 179, 1),
+    450px 0 0 0 rgba(29, 154, 179, 1),
+    600px 0 0 0 rgba(29, 154, 179, 1),
+    750px 0 0 0 rgba(29, 154, 179, 1),
+    900px 0 0 0 rgba(29, 154, 179, 1),
+    1050px 0 0 0 rgba(29, 154, 179, 1),
+    1200px 0 0 0 rgba(29, 154, 179, 1),
+    1350px 0 0 0 rgba(29, 154, 179, 1),
+    1500px 0 0 0 rgba(29, 154, 179, 1),
+    1650px 0 0 0 rgba(29, 154, 179, 1),
+    1800px 0 0 0 rgba(29, 154, 179, 1),
+    1950px 0 0 0 rgba(29, 154, 179, 1)
     ;
   z-index:-100;
 }
