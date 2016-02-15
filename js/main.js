@@ -67,4 +67,6 @@
     });
   }
 
- 
+ var shark = function(){
+  $('#shark').append('<img src="/assets/sharkfin2.png" class="shark2">');
+ }
