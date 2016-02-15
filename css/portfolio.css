@@ -216,14 +216,16 @@ Contact and About me CSS*/
 }*/
 
 .social {
-  height: 32px;
-  width: 32px;
   padding: 20px; 
 }
 
 .socialhover:hover {
   background-color: rgb(15, 178, 213);
   border-radius: 4px;
+}
+
+i {
+  color: black;
 }
 
 .projectimg {
