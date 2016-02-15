@@ -67,8 +67,4 @@
     });
   }
 
-  var shark = function(){
-    console.log("shark")
-  }
-
-shark();
+ 

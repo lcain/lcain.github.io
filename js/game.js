@@ -418,6 +418,8 @@ function update() {
         player.body.velocity.y = -350;
     }
 
+    contact();
+
 
 }
 
