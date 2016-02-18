@@ -17,7 +17,7 @@ body {
 }
 
 .blink_me {
-  animation: blinker 1.3s linear 2;
+  animation: blinker 1s linear 4;
 
 }
 

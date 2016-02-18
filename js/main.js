@@ -27,4 +27,4 @@
 
 setTimeout(function(){
     $('#arrowkeys').addClass('hiding');
-}, 3000);
+}, 5000);
