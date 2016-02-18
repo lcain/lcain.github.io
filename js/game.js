@@ -100,283 +100,88 @@ function create() {
 
 
     //  Here we'll create 12 of them evenly spaced apart
-    for (var i = 0; i < 6; i++)
-    {
+   
+    var addSeacreature = function(name, xOffset, yOffset, i){
 
-        var randomNum = function(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
+        seacreatures = game.add.sprite((i * 80) + xOffset, yOffset, 'seacreatures');
+        game.physics.arcade.enable(seacreatures);
+
+        switch(name){
+            case 'crab1':
+                seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames(name, 0, 25, '', 4), 30, true);
+                seacreatures.body.setSize(20, 85, 0, 0);
+                
+                break;
+            case 'blueJellyfish':
+                seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames(name, 0, 32, '', 4), 30, true);
+                break;
+            case 'octopus':
+                seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames(name, 0, 24, '', 4), 30, true);
+                seacreatures.body.setSize(20, 95, 0, 0);
+                break;
+            case 'purpleFish':
+                seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('purpleFish', 0, 20, '', 4), 30, true);
+                break;
         }
-       
+
+        
+        seacreatures.enableBody = true;
+        seacreatures.body.collideWorldBounds = true;
+        seacreatures.scale.setTo(.3, .3);
+        seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
+        seacreatures.body.gravity.y = 300;
+        seacreatures.animations.play('swim');
+        game.physics.arcade.collide(seacreatures, platforms);
+        seacreaturesg.push(seacreatures);
+
+
+    };
+
+
+
+
+
+
+    for (var i = 0; i < 6; i++) {
 
         if (i === 1){
-        seacreatures = game.add.sprite((i * 80) - 10, 0, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('crab1', 0, 25, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 85, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
+
+            addSeacreature('crab1', -10, 0, i);
+            addSeacreature('crab1', -10, 100, i);
+            addSeacreature('crab1', 210, 250, i);
+            addSeacreature('crab1', -10, 370, i);
+            addSeacreature('purpleFish', 205, 490, i);
+
         } else if ( i === 2) {
-            seacreatures = game.add.sprite(i * 80, 0, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
+            
+            addSeacreature('blueJellyfish', 0, 0, i);
+            addSeacreature('purpleFish', 0, 100, i);
+            addSeacreature('blueJellyfish', 210, 250, i);
+            addSeacreature('octopus', -10, 370, i);
+            addSeacreature('blueJellyfish', 215, 490, i);
 
         } else if ( i === 3) {
-            seacreatures = game.add.sprite((i * 80) - 20, 0, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('octopus', 0, 24, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 95, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
+           
+            addSeacreature('octopus', -20, 0, i);
 
         } else if ( i === 4) {
-            seacreatures = game.add.sprite(i * 70, 0, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('purpleFish', 0, 20, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
+           
+            addSeacreature('purpleFish', -40, 0, i);
 
         } else if ( i === 5) {
-            seacreatures = game.add.sprite((i * 70), 0, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('crab1', 0, 25, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 85, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
+
+            addSeacreature('crab1', -50, 0, i);
 
         } else {
-            seacreatures = game.add.sprite((i * 70) - 200, 0, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-           seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('octopus', 0, 24, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 95, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
+
+            addSeacreature('octopus', -240, 0, i);
+            addSeacreature('blueJellyfish', 0, 100, i);
+            addSeacreature('octopus', 215, 250, i);
+            addSeacreature('blueJellyfish', -10, 370, i);
+            addSeacreature('blueJellyfish', 215, 490, i);
 
         }
-    }
-
-      for (var i = 0; i < 3; i++)
-    {
-
-        if (i === 1){
-        seacreatures = game.add.sprite(i * 80, 100, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('crab1', 0, 25, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 85, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-        } else if ( i === 2) {
-            seacreatures = game.add.sprite(i * 80, 100, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('purpleFish', 0, 20, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-
-        } else {
-            seacreatures = game.add.sprite(i * 80, 100, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-
-        }
-
-        // seacreaturescreate;
-        // var star = stars.create(i * 70, 100, 'star');
-        // star.body.gravity.y = 300;
-        // star.body.bounce.y = 0.7 + Math.random() * 0.2;
-    }
-      for (var i = 0; i < 3; i++)
-    {
-        if (i === 1){
-        seacreatures = game.add.sprite((i * 80) + 210, 250, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('crab1', 0, 25, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 85, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-        } else if ( i === 2) {
-            seacreatures = game.add.sprite((i * 80) + 210, 250, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-
-        } else {
-            seacreatures = game.add.sprite((i * 80) + 210, 250, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('octopus', 0, 24, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 95, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-
-        }
-    }
-       for (var i = 0; i < 3; i++)
-    {
-        if (i === 1){
-        seacreatures = game.add.sprite(i * 70, 370, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('crab1', 0, 25, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 75, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-        } else if ( i === 2) {
-            seacreatures = game.add.sprite(i * 70, 370, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('octopus', 0, 24, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 85, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-
-        } else {
-            seacreatures = game.add.sprite(i * 70, 370, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 55, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-
-        }
-    }
-      for (var i = 0; i < 3; i++)
-    {
-        if (i === 1){
-        seacreatures = game.add.sprite((i * 70) + 210, 490, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('purpleFish', 0, 20, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 55, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-        } else if ( i === 2) {
-            seacreatures = game.add.sprite((i * 70) + 210, 490, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            seacreatures.body.setSize(20, 55, 0, 0);
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreaturesg.push(seacreatures);
-
-        } else {
-            seacreatures = game.add.sprite((i * 70) + 210, 490, 'seacreatures');
-            game.physics.arcade.enable(seacreatures);
-            seacreatures.enableBody = true;
-            seacreatures.body.collideWorldBounds = true;
-            seacreatures.scale.setTo(.3, .3);
-            seacreatures.body.bounce.y = 0.7 + Math.random() * 0.2;
-            seacreatures.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
-            seacreatures.animations.play('swim');
-            seacreatures.body.gravity.y = 300;
-            game.physics.arcade.collide(seacreatures, platforms);
-            seacreatures.body.setSize(20, 55, 0, 0);
-            seacreaturesg.push(seacreatures);
-
-
-        }
-        
-    }
+    };
 
 
     //  The score
