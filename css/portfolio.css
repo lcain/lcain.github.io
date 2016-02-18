@@ -8,6 +8,32 @@ body {
   /*background-image: url("../assets/background1.jpg");*/
 }
 
+#arrowkeys{
+  width: 200px;
+  position: fixed;
+  margin-top: 195px;
+  margin-left: 100px;
+  z-index: 100;
+}
+
+.blink_me {
+  animation: blinker 1.3s linear 2;
+
+}
+
+@keyframes blinker {  
+
+  50% { opacity: 0.0; }
+
+}
+
+.hiding {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+
 #grabCode a{
   border: 1px solid white;
   bottom: 0px;
@@ -183,6 +209,9 @@ Contact and About me CSS*/
   max-width: 400px;
   margin: 40px auto;
   position: relative;
+  color: rgb(15, 178, 213);
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #contact-me {
@@ -194,6 +223,9 @@ Contact and About me CSS*/
   margin: 40px auto;
   position: relative;
   text-align: center;
+  color: rgb(15, 178, 213);
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #projects2 {
@@ -204,6 +236,8 @@ Contact and About me CSS*/
   max-width: 400px;
   margin: 40px auto;
   position: relative;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .titles {
@@ -216,20 +250,21 @@ Contact and About me CSS*/
 }*/
 
 .social {
-  padding: 20px; 
+  padding: 10px; 
 }
 
 .socialhover:hover {
-  color: rgb(15, 178, 213);
+  color: rgb(29, 154, 179);
   border-radius: 4px;
 }
 
 i {
-  color: black;
+  color: rgb(15, 178, 213);
 }
 
 .projectimg {
   width: 175px;
+  height: 100px;
   padding: 11px;
 }
 
@@ -244,10 +279,16 @@ i {
 
 .description {
   display: block;
-  width: 198px;
+  width: 197px;
   text-align: center;
-  color: black;
+  color: rgb(15, 178, 213);
+  font-size: 18px;
+  font-weight: bold;
 
+}
+
+.small {
+  font-size: 12px;
 }
 
 /**
