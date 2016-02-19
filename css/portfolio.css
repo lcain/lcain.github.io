@@ -1,5 +1,6 @@
 body {
   /*background: url("/assets/pattern1.png");*/
+  transition: 0.75s ease;
   background-color: rgb(15, 178, 213);
   background-size: cover;
   z-index: 10;
@@ -377,6 +378,7 @@ i {
 
 /*Time to finalise the cloud shape*/
 .cloud {
+    transition: 0.75s ease;
   width: 200px; height: 60px;
   background: #fff;
   
@@ -388,6 +390,7 @@ i {
 }
 
 .cloud:before, .cloud:after {
+    transition: 0.75s ease;
   content: '';
   position: absolute; 
   background: #fff;
@@ -404,6 +407,7 @@ i {
 }
 
 .cloud:after {
+  transition: 0.75s ease;
   width: 120px; height: 120px;
   top: -55px; left: auto; right: 15px;
 }
@@ -542,6 +546,7 @@ i {
 -----------------*/
 
 .wave2{
+  transition: 0.75s ease;
   z-index:-100;
   background:#1D9AB3;
   height:200px;
@@ -558,6 +563,7 @@ i {
   animation: middle 2s infinite alternate;
 }
 .wave2:after{
+  transition: 0.75s ease;
   content:'';
   width:200px;
   height:100px;
@@ -587,6 +593,7 @@ i {
   animation: first 1.5s infinite alternate;
 }
 .wave3:after{
+  transition: 0.75s ease;
   content:'';
   width:150px;
   height:100px;
@@ -612,6 +619,56 @@ i {
     ;
   z-index:-100;
 }
+
+
+
+
+.darkCloud, .darkCloud:before, .darkCloud:after {
+  background: #666666;
+}
+.dbody{
+  background-color: black;
+}
+.dwave2{
+  background-color: #08292f;
+}
+.dwave2:after {
+  box-shadow:
+    200px 0 0 0 rgb(0, 0, 0), 400px 0 0 0 rgb(0, 0, 0), 600px 0 0 0 rgb(0, 0, 0), 800px 0 0 0 rgb(0, 0, 0), 1000px 0 0 0 rgb(0, 0, 0), 1200px 0 0 0 rgb(0, 0, 0), 1400px 0 0 0 rgb(0, 0, 0), 1600px 0 0 0 rgb(0, 0, 0), 1800px 0 0 0 rgb(0, 0, 0);
+}
+.dwave3{
+  background-color: rgb(5, 59, 70);
+}
+.dwave3:after {
+  box-shadow:
+    150px 0 0 0 rgba(8, 41, 47, 1),
+    300px 0 0 0 rgba(8, 41, 47, 1),
+    450px 0 0 0 rgba(8, 41, 47, 1),
+    600px 0 0 0 rgba(8, 41, 47, 1),
+    750px 0 0 0 rgba(8, 41, 47, 1),
+    900px 0 0 0 rgba(8, 41, 47, 1),
+    1050px 0 0 0 rgba(8, 41, 47, 1),
+    1200px 0 0 0 rgba(8, 41, 47, 1),
+    1350px 0 0 0 rgba(8, 41, 47, 1),
+    1500px 0 0 0 rgba(8, 41, 47, 1),
+    1650px 0 0 0 rgba(8, 41, 47, 1),
+    1800px 0 0 0 rgba(8, 41, 47, 1),
+    1950px 0 0 0 rgba(8, 41, 47, 1)
+    ;
+}
+
+.star {
+  background-color: rgba(0,0,0,0);
+  position: fixed;
+  z-index: -300;
+  color: white;
+  transition: .5s ease;
+}
+.hidden {
+  color: rgba(0,0,0,0);
+}
+
+
 
 
 
