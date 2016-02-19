@@ -228,6 +228,15 @@ Contact and About me CSS*/
   font-weight: bold;
 }
 
+#contact-me a{
+  text-decoration: none;
+  color: rgb(15, 178, 213);
+}
+
+#contact-me a:hover {
+  color: rgb(29, 154, 179);
+}
+
 #projects2 {
   background-color: rgb(226, 249, 255);
   border-radius: 20px;
