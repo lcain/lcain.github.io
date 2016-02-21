@@ -287,6 +287,16 @@ i {
   display: inline-block;
 }
 
+.projectAlign a:visited, .projectAlign a {
+  text-decoration: none; 
+  decoration: none; 
+  color: rgb(15, 178, 213);
+}
+
+.projectAlign a:hover{
+  color: rgb(29, 154, 179);
+}
+
 .description {
   display: block;
   width: 197px;
